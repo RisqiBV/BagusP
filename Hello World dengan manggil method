@@ -1,0 +1,15 @@
+class Hai{
+
+    void getHelloW (){
+
+        System.out.println("Hello World!");
+    }
+}
+
+public class eksekusi {
+    public static void main(String[] args) {
+        Hai kusi = new Hai();
+
+        kusi.getHelloW();
+    }
+}
