@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class Aritmatika {
+
+    public static void main (String [] arg) {
+        Scanner hitung = new Scanner (System.in);
+        int a,b,c,d,e,g,h;
+        double f;
+
+        System.out.print ("Tuliskan nilai a = ");
+        a = hitung.nextInt() ;
+        System.out.print ("Tuliskan nilai b = ");
+        b = hitung.nextInt ();
+
+        c = a+b;
+        d = a-b;
+        e = a/b;
+        f = (double) a/b;
+        g = a*b;
+        h = a%b;
+
+        System.out.println("Hasil = ");
+        System.out.println("C =" +c);
+        System.out.println("D=" +d);
+        System.out.println("E=" +e);
+        System.out.println("F=" +f);
+        System.out.println("G=" +g);
+        System.out.println("H=" +h);
+    }
+}
