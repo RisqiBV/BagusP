@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+class HurufVokalKonsonanM{
+
+    static String hapushurufvokal(String paramTeks){
+    
+    String konsonan= "";
+
+    for(char karakter : paramTeks.toCharArray()) {
+
+        if(karakter != 'a' && karakter != 'i'
+        && karakter != 'u' && karakter != 'e'
+        && karakter != 'o' && karakter != ' ') {
+            konsonan += karakter;
+        }
+    }
+    return konsonan;
+    }
+    public static void main(String[] args) {
+        
+        Scanner masuk = new Scanner(System.in);
+        System.out.print("Masukkan teks: ");
+        String teks;
+        teks = masuk.nextLine();
+        teks = teks.toLowerCase();
+
+        String hasil = hapushurufvokal(teks);
+
+        hapushurufvokal(teks);
+        System.out.println(hasil);
+
+    }
+}
