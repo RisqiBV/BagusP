@@ -1,0 +1,88 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+
+class tampil{
+
+    static Scanner masuk = new Scanner(System.in);
+    static ArrayList <Float> jumlahdata = new ArrayList <Float>();
+    static boolean x = true;
+    static boolean y = true;
+    static String ulang;
+
+    static void methody(){
+
+        System.out.println("Pilih Menu:");
+        System.out.println("1. Input Nilai");
+        System.out.println("2. Lihat Nilai");
+        System.out.println("3. Keluar");
+        System.out.println("---------------");
+        System.out.print("Pilih : ");
+
+        int pilihan = masuk.nextInt();
+        switch(pilihan){
+            
+            case 1 : 
+            menusatu();
+            break;
+
+            case 2 :
+            menudua();
+            break;  
+
+            case 3 :
+            menutiga();
+            break;
+
+            default:
+            System.out.println("eror");
+        }
+    }
+
+    static void menusatu(){
+
+            do {
+            
+            System.out.print("Input data : ");
+            
+            float data = masuk.nextFloat();
+            jumlahdata.add(data);
+
+              do { 
+                System.out.println("-----------------------------------");
+                System.out.print("Apakah Anda ingin input lagi(Y/N) : ");
+                ulang = masuk.next();
+
+                if (ulang.equals("Y") || ulang.equals("y")){
+                    y = true;
+                } else if (ulang.equals("N") || ulang.equals("n")){
+                    y = true;
+                } else {
+                    y = false;
+                    System.out.println(">>> Error. Input Y/N.");
+                }
+            } while (x!=y);
+         } while (ulang.equals("Y") || ulang.equals("y"));
+         System.out.println("---------------------------"); 
+         System.out.println("Anda kembali ke pilihan menu.");
+    }
+
+    static void menudua(){
+        
+        System.out.println("Menampilkan Datamu:");
+        for (int i=0 ; i<jumlahdata.size(); i++){
+        System.out.println("Ini data ke - " +(i+1) + " : "+ jumlahdata.get(i));
+        }
+        System.out.println("---------------------------------------");
+        System.out.println("Kembali Ke Menu.");
+    }
+
+    static void menutiga(){
+        System.exit(0);
+    }
+    public static void main(String[] args) {
+
+        do{
+            methody();
+        } while (ulang.equals("N") || ulang.equals("n"));        
+       }       
+    }
